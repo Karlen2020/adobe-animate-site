@@ -7,7 +7,7 @@
 
 .back {
   display: inline-block;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   font-size: var(--fs-mid);
   margin-bottom: 1rem;
   margin-top: 10px;
