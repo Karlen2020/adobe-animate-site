@@ -1,0 +1,48 @@
+.footer {
+  background: rgb(105, 92, 214);
+  margin-top: var(--gap-section);
+  padding: 3rem 0 2.5rem;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 2rem;
+}
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav a {
+  font-size: 0.9rem;
+  color: black;
+}
+
+.nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.contacts h3 {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 12px;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: black;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 720px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}

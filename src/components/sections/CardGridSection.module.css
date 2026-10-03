@@ -1,0 +1,38 @@
+.section {
+  padding: 2.5rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: 1.5rem;
+}
+
+.gridItem {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.visible .gridItem {
+  animation: rise 0.55s ease both;
+  animation-delay: var(--delay);
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

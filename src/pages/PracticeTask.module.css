@@ -1,0 +1,42 @@
+.page {
+  padding-top: 2.5rem;
+  padding-bottom: var(--gap-section);
+}
+
+.back {
+  display: inline-block;
+  color: var(--color-text-muted);
+  font-size: var(--fs-mid);
+  margin-bottom: 1.5rem;
+  margin-top: 10px;
+}
+
+.back:hover {
+  color: var(--color-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.title {
+  font-size: var(--fs-h2);
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--color-text-muted);
+  white-space: pre-line;
+  line-height: 1.8;
+}
+
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
