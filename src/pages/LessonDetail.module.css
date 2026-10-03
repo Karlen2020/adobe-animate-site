@@ -39,3 +39,8 @@
   text-align: center;
   color: var(--color-primary);
 }
+@media (max-width: 480px) {
+  .back {
+    margin: 10px 0 1rem;
+  }
+}

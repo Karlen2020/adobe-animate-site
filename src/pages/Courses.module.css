@@ -186,13 +186,6 @@
     grid-template-columns: 1fr;
   }
 }
-.sliderTrack {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  width: 100%;
-}
-
 .slideNext {
   animation: slideNext 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -255,5 +248,13 @@
 
   .searchInput {
     font-size: 1rem;
+  }
+}
+.pillButton {
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .backLink {
+    margin: 10px 0 1rem;
   }
 }
