@@ -6,7 +6,6 @@
 .pageTitle {
   text-align: center;
   font-size: var(--fs-h1);
-  /* text-decoration: underline; */
   text-decoration-color: var(--color-primary-light);
   text-underline-offset: 10px;
   display: block;
@@ -33,7 +32,7 @@
 }
 
 .card {
-  background: #c7c0f2;
+  background: #a9c0cc;;
   border-radius: var(--radius-md);
   padding: 2rem 1.5rem 1.5rem;
   display: flex;
