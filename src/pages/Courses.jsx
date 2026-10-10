@@ -1,7 +1,21 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import { Helmet } from "../components/common/Helmet";
 import { CodeIcon } from "../components/common/icons";
 import styles from "./Courses.module.css";
+const PdfViewer = lazy(() => import("../components/common/PdfViewer"));
+
+const GUIDE_FILES = Array.from({ length: 7 }, (_, i) => ({
+  title: `Ուղեցույց ${i + 1}`,
+  src: `/docs/guide${i + 1}.pdf`,
+}));
+
+function GuidesViewer() {
+  return (
+    <Suspense fallback={<p>Բեռնվում է…</p>}>
+      <PdfViewer files={GUIDE_FILES} />
+    </Suspense>
+  );
+}
 
 const SUBTITLE = "Լրացուցիչ նյութեր խորացված ուսումնասիրելու համար:";
 
@@ -107,11 +121,7 @@ function PdfBlock() {
           <li key={item}>{item}</li>
         ))}
       </ol>
-      <div className={styles.actionRow}>
-        <a href="/pdf.zip" download className={styles.pillButton}>
-          Ներբեռնել PDF
-        </a>
-      </div>
+            <GuidesViewer />
     </>
   );
 }
@@ -241,11 +251,7 @@ function ActionScriptBlock() {
         ))}
       </ol>
       <p className={styles.note}>{ACTIONSCRIPT_NOTE}</p>
-      <div className={styles.actionRow}>
-        <a href="/pdf.zip" download className={styles.pillButton}>
-          Ներբեռնել PDF
-        </a>
-      </div>
+            <GuidesViewer />
     </>
   );
 }
